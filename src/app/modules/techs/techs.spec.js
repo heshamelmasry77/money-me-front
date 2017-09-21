@@ -1,6 +1,6 @@
 var angular = require('angular');
 require('angular-mocks');
-var techs = require('./techs');
+var techs = require('./controllers/techs');
 
 var techsJson = [
   {

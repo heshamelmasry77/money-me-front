@@ -1,6 +1,6 @@
 var angular = require('angular');
 require('angular-mocks');
-var tech = require('./tech');
+var tech = require('./controllers/tech');
 
 describe('tech component', function () {
   beforeEach(function () {

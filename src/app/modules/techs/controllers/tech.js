@@ -1,5 +1,5 @@
 module.exports = {
-  template: require('./tech.html'),
+  template: require('../views/tech.html'),
   bindings: {
     tech: '<'
   }
