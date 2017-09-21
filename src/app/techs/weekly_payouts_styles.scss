@@ -1,0 +1,38 @@
+.weekly-payouts {
+  .details {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    .table {
+      border:5px solid #555555;
+      margin: auto;
+      float: none;
+      tr {
+        background-color: #ffffff;
+        &:nth-of-type(odd) {
+          background-color: lightgray;
+        }
+        td {
+          padding: 5px;
+          font-weight: bold;
+          font-family: 'Roboto', sans-serif;
+          border:none;
+          a {
+            color: #78a15a;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+    h3 {
+      font-weight: bold;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-decoration: underline;
+    }
+  }
+}
