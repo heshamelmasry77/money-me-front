@@ -11,5 +11,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   }).state('topBitcoinMining', {
     url: '/top-bitcoin-mining',
     component: 'fountainTopBitcoinMining'
+  }).state('topPayingHyip', {
+    url: '/top-paying-hyip',
+    component: 'fountainTopPayingHyip'
   });
 }

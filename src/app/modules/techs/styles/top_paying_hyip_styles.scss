@@ -1,0 +1,50 @@
+.top-paying-hyip {
+  .details {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    .table {
+      border: 5px solid #232322;
+      margin: auto;
+      float: none;
+      tr {
+        th {
+          text-align: center;
+        }
+        background-color: white;
+        &:nth-of-type(odd) {
+          background-color: lightgray;
+        }
+        td {
+          padding: 5px;
+          font-weight: bold;
+          font-family: 'Roboto', sans-serif;
+          a {
+            color: #78a15a;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          p {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: normal;
+            text-align: -webkit-auto;
+          }
+          h4 {
+            color: #78a15a;
+          }
+          h5{
+            color: #404040;
+          }
+        }
+
+      }
+    }
+    h3 {
+      font-weight: bold;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-decoration: underline;
+    }
+  }
+}
