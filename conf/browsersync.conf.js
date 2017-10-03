@@ -8,7 +8,7 @@ module.exports = function () {
         conf.paths.src
       ]
     },
-    open: true,
+    open: false,
     notify: false,
     port: process.env.PORT || 3008
   };
