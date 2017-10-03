@@ -9,6 +9,7 @@ module.exports = function () {
       ]
     },
     open: true,
+    notify: false,
     port: process.env.PORT || 3008
   };
 };
