@@ -55,7 +55,6 @@
     "webpack": "^2.2.1",
     "webpack-fail-plugin": "^1.0.5"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "gulp serve",
     "heroku-prebuild": "npm install",
