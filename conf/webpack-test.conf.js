@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {},
-      debug: true
+      debug: false
     })
   ],
   devtool: 'source-map'

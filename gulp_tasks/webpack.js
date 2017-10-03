@@ -12,12 +12,12 @@ gulp.task('webpack:dev', done => {
 });
 
 gulp.task('webpack:watch', done => {
-  webpackWrapper(false, webpackConf, done);
+  webpackWrapper(true, webpackConf, done);
 });
 
 gulp.task('webpack:dist', done => {
   process.env.NODE_ENV = 'production';
-  webpackWrapper(true, webpackDistConf, done);
+  webpackWrapper(false, webpackDistConf, done);
 });
 
 function webpackWrapper(watch, conf, done) {
