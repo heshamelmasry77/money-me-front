@@ -18,5 +18,16 @@ angular
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
-  .component('fountainFooter', footer);
+  .component('fountainFooter', footer)
+  .run(function ($transitions, $window) {
+    $transitions.onSuccess({}, transition => {
+      let title = transition.to().title;
+      if (title) {
+        if (title instanceof Function) {
+          title = title.call(transition.to(), transition.params());
+        }
+        $window.document.title = title;
+      }
+    });
+  });
 

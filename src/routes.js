@@ -7,7 +7,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider.state('app', {
     url: '/',
-    component: 'app'
+    component: 'app',
+    title: 'Foo Page'
   }).state('topBitcoinMining', {
     url: '/top-bitcoin-mining',
     component: 'fountainTopBitcoinMining'

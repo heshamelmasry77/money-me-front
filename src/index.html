@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 <head>
   <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png"/>
-  <title>*** MoneyMe TOP Paying HYIP - Top Bitcoin Mining - Hyip Monitor ***</title>
+  <title ng-bind="$state.current.title"></title>
   <meta name="description"
         content="Premium HYIPs are the ones that we invested and monitored. The premium hyip ranking is based on our experience and for your reference only.">
   <meta name="description"
@@ -21,7 +21,7 @@
     gtag('config', 'UA-107433086-1');
   </script>
 </head>
-<body ng-app="app">
+<body>
 <ui-view></ui-view>
 </body>
 </html>
