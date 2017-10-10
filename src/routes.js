@@ -8,12 +8,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state('app', {
     url: '/',
     component: 'app',
-    title: 'Foo Page'
+    title: '*** MoneyMe - Hyip Monitor - Weekly Report ***'
   }).state('topBitcoinMining', {
     url: '/top-bitcoin-mining',
-    component: 'fountainTopBitcoinMining'
+    component: 'fountainTopBitcoinMining',
+    title: 'MoneyMe - Top Bitcoin Mining'
   }).state('topPayingHyip', {
     url: '/top-paying-hyip',
-    component: 'fountainTopPayingHyip'
+    component: 'fountainTopPayingHyip',
+    title: 'MoneyMe - TOP Paying HYIP'
   });
 }
