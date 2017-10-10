@@ -2,6 +2,7 @@ var angular = require('angular');
 
 var techsModule = require('./app/modules/techs/index');
 require('angular-ui-router');
+require('expose-loader?$!jquery');
 var routesConfig = require('./routes');
 
 var main = require('./app/main');

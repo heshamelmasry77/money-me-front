@@ -42,6 +42,23 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      {test: require.resolve('jquery'), loader: 'expose-loader?$'}
+    ],
+    rules: [
+      {
+        test: require.resolve('jquery'),
+        use: [
+          {loader: 'expose-loader', options: 'jQuery'},
+          {loader: 'expose-loader', options: '$'}
+        ]
+      },
+
+      {
+        test: require.resolve('tether'),
+        use: [
+          {loader: 'expose-loader', options: 'Tether'}
+        ]
       }
     ]
   },
@@ -62,7 +79,13 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Tether: 'tether'
+      tether: 'tether',
+      Tether: 'tether',
+      'window.Tether': 'tether',
+      Popper: ['popper.js', 'default'],
+      // In case you imported plugins individually, you must also require them here:
+      Util: 'exports-loader?Util!bootstrap/js/dist/util',
+      Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
     })
   ],
   devtool: 'source-map',
