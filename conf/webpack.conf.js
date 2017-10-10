@@ -8,6 +8,56 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
+    rules: [
+      {
+        test: require.resolve('jquery'),
+        use: [
+          {loader: 'expose-loader', options: 'jQuery'},
+          {loader: 'expose-loader', options: '$'}
+        ]
+      },
+
+      {
+        test: require.resolve('tether'),
+        use: [
+          {loader: 'expose-loader', options: 'Tether'}
+        ]
+      },
+      {
+        test: /\.json$/,
+        loaders: [
+          'json-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        enforce: 'pre'
+      },
+      {
+        test: /\.(css|scss)$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: [
+          'ng-annotate-loader'
+        ]
+      },
+      {
+        test: /\.html$/,
+        loaders: [
+          'html-loader'
+        ]
+      }
+    ],
     loaders: [
       {
         test: /\.json$/,
@@ -44,22 +94,6 @@ module.exports = {
         ]
       },
       {test: require.resolve('jquery'), loader: 'expose-loader?$'}
-    ],
-    rules: [
-      {
-        test: require.resolve('jquery'),
-        use: [
-          {loader: 'expose-loader', options: 'jQuery'},
-          {loader: 'expose-loader', options: '$'}
-        ]
-      },
-
-      {
-        test: require.resolve('tether'),
-        use: [
-          {loader: 'expose-loader', options: 'Tether'}
-        ]
-      }
     ]
   },
   plugins: [
