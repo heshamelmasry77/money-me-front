@@ -43,22 +43,6 @@ module.exports = {
           'html-loader'
         ]
       }
-    ],
-    rules: [
-      {
-        test: require.resolve('jquery'),
-        use: [
-          {loader: 'expose-loader', options: 'jQuery'},
-          {loader: 'expose-loader', options: '$'}
-        ]
-      },
-
-      {
-        test: require.resolve('tether'),
-        use: [
-          {loader: 'expose-loader', options: 'Tether'}
-        ]
-      }
     ]
   },
   plugins: [
@@ -78,9 +62,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      tether: 'tether',
-      Tether: 'tether',
-      'window.Tether': 'tether'
+      Tether: 'tether'
     })
   ],
   devtool: 'source-map',
