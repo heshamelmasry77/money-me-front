@@ -10,24 +10,33 @@ var header = require('./app/shared/header');
 var title = require('./app/shared/title');
 var footer = require('./app/shared/footer');
 import 'bootstrap';
+import 'ng-meta';
 require('./index.scss');
 
 angular
-  .module('app', [techsModule, 'ui.router'])
-  .config(routesConfig)
+  .module('app', [techsModule, 'ui.router', 'ngMeta'])
+  .config(routesConfig, function (ngMetaProvider) {
+    ngMetaProvider.useTitleSuffix(true);
+    ngMetaProvider.setDefaultTitle('Fallback Title');
+    ngMetaProvider.setDefaultTitleSuffix(' | YourSite');
+    ngMetaProvider.setDefaultTag('author', 'John Smith');
+  })
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
-  .run(function ($transitions, $window) {
-    $transitions.onSuccess({}, transition => {
-      let title = transition.to().title;
-      if (title) {
-        if (title instanceof Function) {
-          title = title.call(transition.to(), transition.params());
-        }
-        $window.document.title = title;
-      }
-    });
+  // .run(function ($transitions, $window) {
+  //   $transitions.onSuccess({}, transition => {
+  //     let title = transition.to().title;
+  //     if (title) {
+  //       if (title instanceof Function) {
+  //         title = title.call(transition.to(), transition.params());
+  //       }
+  //       $window.document.title = title;
+  //     }
+  //   });
+  // })
+  .run(function (ngMeta) {
+    ngMeta.init();
   });
 

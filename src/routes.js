@@ -1,14 +1,25 @@
 module.exports = routesConfig;
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, ngMetaProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
+  ngMetaProvider.useTitleSuffix(true);
 
+  ngMetaProvider.setDefaultTitleSuffix(' | Best Website on the Internet!');
+
+  ngMetaProvider.setDefaultTag('author', 'John Smith');
   $stateProvider.state('app', {
     url: '/',
     component: 'app',
-    title: '*** MoneyMe - Hyip Monitor - Weekly Report ***'
+    data: {
+      meta: {
+        title: 'Pet Vaccinations - All You Need To Know | PawSquad',
+        'og:title': 'All You Need To Know About Pet Vaccinations',
+        description: 'Useful information about Routine Vaccines and Boosters for dogs and cats,   including start vaccines for puppies and kittens.',
+        'og:description': 'Useful information about Routine Vaccines and Boosters for dogs and cats,   including start vaccines for puppies and kittens.'
+      }
+    }
   }).state('topBitcoinMining', {
     url: '/top-bitcoin-mining',
     component: 'fountainTopBitcoinMining',

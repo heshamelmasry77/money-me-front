@@ -5,11 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png"/>
-  <title ng-bind="$state.current.title"></title>
-  <meta name="description"
-        content=" HYIPs are the ones that we invested and monitored. The premium hyip ranking is based on our experience and for your reference only.">
-  <meta name="description"
-        content="TOP BITCOIN MINING Programs Description Status Genesis-mining.com ⇒ Genes-mining.com Website ⇒ Genesis-mining.com Review Genesis-mining.com offers you a smart and easy way to invest your money. Their solution is suitable for those who are new to the world of crypto currencies, as well as for cryptocurrency experts and large-scale investors.">
+  <title ng-bind="ngMeta.title"></title>
+
+  <!-- Arbitrary tags -->
+  <meta property="og:type" content="{{ngMeta['og:type']}}" />
+  <meta property="og:locale" content="{{ngMeta['og:locale']}}" />
+  <meta name="author" content="{{ngMeta['author']}}" />
+  <!-- OR <meta name="author" content="{{ngMeta.author}}" /> -->
+  <meta name="description" content="{{ngMeta.description}}" />
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107433086-1"></script>
   <script>
