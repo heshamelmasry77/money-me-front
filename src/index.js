@@ -17,9 +17,9 @@ angular
   .module('app', [techsModule, 'ui.router', 'ngMeta'])
   .config(routesConfig, function (ngMetaProvider) {
     ngMetaProvider.useTitleSuffix(true);
-    ngMetaProvider.setDefaultTitle('Fallback Title');
-    ngMetaProvider.setDefaultTitleSuffix(' | YourSite');
-    ngMetaProvider.setDefaultTag('author', 'John Smith');
+    ngMetaProvider.setDefaultTitle('MoneyMe');
+    ngMetaProvider.setDefaultTitleSuffix(' | MoneyMe');
+    ngMetaProvider.setDefaultTag('author', 'Hesham EL masry');
   })
   .component('app', main)
   .component('fountainHeader', header)
